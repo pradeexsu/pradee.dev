@@ -1,0 +1,46 @@
+export const info_data = {
+  name: 'Pradeep Suthar',
+  title: 'Software Engineer',
+  description:
+    'Building investment experiences at @smallcase. Passionate about creating impactful products through smart, innovative technology.',
+  website: 'https://pradee.dev',
+  baseUrl: 'https://pradee.dev',
+  siteName: 'Pradeep Suthar',
+  locale: 'en_IN',
+  avatar: 'https://avatars.githubusercontent.com/u/49487927?v=4',
+  shortDescription:
+    'Software Engineering Experiance @smallcase | Tech Enthusiast',
+  social: {
+    x: {
+      url: 'https://x.com/pradeexsu/',
+      username: 'pradeexsu',
+    },
+    linkedin: {
+      url: 'https://www.linkedin.com/in/pradeep-swe/',
+      username: 'pradeep-swe',
+    },
+    github: {
+      url: 'https://github.com/pradeexsu',
+      username: 'pradeexsu',
+    },
+    stackoverflow: {
+      url: 'https://stackoverflow.com/users/12537691/pradeexsu',
+      username: 'pradeexsu',
+    },
+  },
+  opengraph: {
+    url: '',
+  },
+};
+
+if (process.env.NODE_ENV === 'development') {
+  info_data.baseUrl = 'http://localhost:3000';
+}
+
+info_data.opengraph = {
+  url: `${info_data.baseUrl}/og?title=${encodeURIComponent(info_data.name)}&description=${encodeURIComponent(
+    info_data.shortDescription,
+  )}&avatar=${encodeURIComponent(info_data.avatar)}`,
+};
+
+export const baseUrl = info_data.baseUrl;

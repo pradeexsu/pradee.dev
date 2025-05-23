@@ -6,23 +6,48 @@ import { Navbar } from './components/nav';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Footer from './components/footer';
-import { baseUrl } from './sitemap';
-import Image from 'next/image';
+import { info_data, baseUrl } from 'data/info';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: `${info_data.name} | Software Engineer`,
+    template: '%s | Pradeep Suthar',
   },
-  description: 'This is my portfolio.',
+  description: info_data.description,
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: info_data.name,
+    description: `Software Engineering @smallcase | Tech Enthusiast`,
     url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
+    siteName: info_data.siteName,
+    locale: info_data.locale,
     type: 'website',
+    images: [
+      {
+        url: info_data.opengraph.url,
+        width: 1200,
+        height: 630,
+        alt: `${info_data.siteName} Portfolio Open Graph Image`,
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pradeep Suthar',
+    description: info_data.shortDescription,
+    images: [info_data.opengraph.url],
+    creator: info_data.social.x.username,
+    site: info_data.social.x.username,
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon.png',
+    },
   },
   robots: {
     index: true,
