@@ -1,6 +1,6 @@
 import { getBlogPosts } from 'app/blog/utils';
 import { info_data } from 'data/info';
-const baseUrl = info_data.baseUrl;
+export const baseUrl = info_data.baseUrl;
 
 export default async function sitemap() {
   let blogs = getBlogPosts().map((post) => ({
