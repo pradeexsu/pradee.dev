@@ -28,7 +28,7 @@ export function GET(request: Request) {
             {title}
           </h2>
           {description && (
-            <div tw="text-lg text-left text-neutral-200">{description}</div>
+            <div tw="text-xl text-left text-neutral-200">{description}</div>
           )}
         </div>
       </div>
