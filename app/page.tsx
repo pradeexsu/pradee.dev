@@ -1,6 +1,7 @@
-import { info } from 'data/info';
-import Anc from './components/link';
 import './styles.scss';
+
+import { info } from 'data/info';
+import Badge from './components/badge';
 import { BlogPosts } from './components/posts';
 
 export default function Page() {
@@ -11,16 +12,8 @@ export default function Page() {
       </h1>
       <p className="mb-4 animate-intro">
         {info.description.injectMany({
-          '@smallcase': (val) => (
-            <Anc link="https://smallcase.com" icon="/sc-white.svg">
-              {val}
-            </Anc>
-          ),
-          '@upstox': (val) => (
-            <Anc link="https://upstox.com" icon="/upstox-white.svg">
-              {val}
-            </Anc>
-          ),
+          '@smallcase': (val) => <Badge icon="/sc-white.svg">{val}</Badge>,
+          '@upstox': (val) => <Badge icon="/upstox-white.svg">{val}</Badge>,
         })}
       </p>
       <div className="my-8 animate-intro">
