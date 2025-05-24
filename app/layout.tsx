@@ -1,5 +1,6 @@
 import './global.css';
 import 'utils/string';
+import { cx } from 'utils/class';
 
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
@@ -64,7 +65,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(' ');
 
 export default function RootLayout({
   children,

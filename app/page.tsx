@@ -12,8 +12,8 @@ export default function Page() {
       </h1>
       <p className="mb-4 animate-intro">
         {info.description.injectMany({
-          '@smallcase': (val) => <Badge icon="/sc-white.svg">{val}</Badge>,
-          '@upstox': (val) => <Badge icon="/upstox-white.svg">{val}</Badge>,
+          '@smallcase': (val) => <Badge icon="/sc-white.svg" className='h-6'/>,
+          '@upstox': (val) => <Badge icon="/upstox-white.svg" />,
         })}
       </p>
       <div className="my-8 animate-intro">
