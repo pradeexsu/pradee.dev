@@ -2,7 +2,7 @@ const info_data = {
   name: 'Pradeep Suthar',
   title: 'Software Engineer',
   description:
-    'Building investment experiences at @smallcase. Passionate about creating impactful products through smart, innovative technology.',
+    'Building investment experiences at @smallcase. Passionate about creating impactful products through smart, innovative technology. In past worked at @upstox in building trading experiences.',
   website: 'https://pradee.dev',
   baseUrl: 'https://pradee.dev',
   siteName: 'Pradeep Suthar',

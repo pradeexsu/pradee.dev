@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { BlogPosts } from './components/posts';
+import { info } from 'data/info';
 import Anc from './components/link';
 import './styles.scss';
 
@@ -10,25 +9,20 @@ export default function Page() {
         Pradeep Suthar
       </h1>
       <p className="mb-4 animate-intro">
-        I'm a software developer building innovative investing tools at{' '}
-        <Anc link="https://smallcase.com" new_tab>
-          smallcase
-        </Anc>
-        , previously crafting investing experiences at{' '}
-        <Anc link="https://upstox.com" label="Upstox" new_tab />. I have a .
-        Passionate about clean code, product thinking, and shaping the future of
-        fintech.
+        {info.description.injectMany({
+          '@smallcase': (val) => (
+            <Anc link="https://smallcase.com" icon="/sc-white.svg">
+              {val}
+            </Anc>
+          ),
+          '@upstox': (val) => (
+            <Anc link="https://upstox.com" icon="/upstox-white.svg">
+              {val}
+            </Anc>
+          ),
+        })}
       </p>
-      <div className="my-8 animate-intro">
-        <Image
-          src="/working-on.gif"
-          alt="Portfolio"
-          width={300}
-          height={200}
-          className="rounded-lg shadow-lg"
-        />
-        <BlogPosts />
-      </div>
+      <div className="my-8 animate-intro"> </div>
     </section>
   );
 }

@@ -6,6 +6,10 @@
   color: var(--sh-identifier);
 }
 
+img {
+  @apply select-none;
+}
+
 :root {
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;

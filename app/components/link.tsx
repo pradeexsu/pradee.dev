@@ -1,25 +1,36 @@
 import React from 'react';
 
 function Anc({
+  icon,
   label,
   link,
-  new_tab,
   children,
+  newTab = true,
 }: {
   label?: string;
   link: string;
-  new_tab?: boolean;
+  newTab?: boolean;
   children?: React.ReactNode;
+  icon?: string;
 }) {
   return (
-    <a
-      className="link"
-      rel="noopener noreferrer"
-      target={new_tab ? '_blank' : '_self'}
-      href={link}
-    >
-      {label || children}
-    </a>
+    <span className="inline-flex items-center mx-1">
+      {icon ? (
+        <img
+          src={icon}
+          className="h-5 translate-y-1.5 border rounded-sm py-[1px] px-[2px] border-gray-600/50"
+        />
+      ) : (
+        <a
+          className="link"
+          rel="noopener noreferrer"
+          target={newTab ? '_blank' : '_self'}
+          href={link}
+        >
+          {label || children}
+        </a>
+      )}
+    </span>
   );
 }
 
