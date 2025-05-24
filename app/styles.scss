@@ -1,0 +1,43 @@
+@use 'sass:list';
+
+@mixin text-selection-shadow(
+  $color: #000000,
+  $start: 0em,
+  $width: 0.1em,
+  $step: 0.015em
+) {
+  $shadows: ();
+  $x: $start;
+  $y: $start;
+  $limit: $width + $start;
+  @while $x <= $limit {
+    $shadows: append($shadows, #{$x} #{$y} 0 #{$color}, comma);
+    $x: $x + $step;
+    $y: $y + $step;
+  }
+  text-shadow: #{list.join($shadows, ', ')};
+}
+
+@function shadow($s-color, $s-start, $s-width) {
+  $output: '';
+  $a: $s-start;
+  $x: $a;
+  $y: $a;
+  $i: 0.0025em;
+  $s-size: $s-width + $s-start;
+  @while $x <= ($s-size + $i) {
+    $output: $output + '#{$x} #{$y} 0 #{$s-color}';
+    @if ($s-size + 0) >= $x {
+      $output: $output + ', ';
+    }
+    $y: $y + $i;
+    $x: $x + $i;
+  }
+  @return unquote($output);
+}
+
+.heading {
+  &::selection {
+    text-shadow: shadow(#000000, 0, 0.1em);
+  }
+}

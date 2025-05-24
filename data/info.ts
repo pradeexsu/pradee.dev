@@ -1,4 +1,4 @@
-export const info_data = {
+const info_data = {
   name: 'Pradeep Suthar',
   title: 'Software Engineer',
   description:
@@ -43,4 +43,29 @@ info_data.opengraph = {
   )}&avatar=${encodeURIComponent(info_data.avatar)}`,
 };
 
-export const baseUrl = info_data.baseUrl;
+const footerLinks = [
+  {
+    label: '@pradeexsu',
+    link: 'https://x.com/pradeexsu',
+    new_tab: true,
+  },
+  {
+    label: 'github',
+    link: 'https://github.com/pradeexsu',
+    new_tab: true,
+  },
+  {
+    label: 'linkedin',
+    link: 'https://linkedin.com/in/pradeep-swe',
+    new_tab: true,
+  },
+  {
+    label: 'rss',
+    link: '/rss',
+    new_tab: false,
+  },
+];
+
+const baseUrl = info_data.baseUrl;
+
+export { footerLinks, baseUrl, info_data as info, info_data };

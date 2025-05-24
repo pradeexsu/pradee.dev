@@ -1,10 +1,9 @@
 @import 'tailwindcss';
-
 @config "../tailwind.config.js";
 
 ::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+  background: var(--sh-jsxliterals);
+  color: var(--sh-identifier);
 }
 
 :root {
@@ -152,12 +151,9 @@ table {
 }
 
 .link {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 
 .link:hover {
-  text-decoration-thickness: 2px;
-  text-underline-offset: 1px;
+  color: var(--sh-class);
 }
