@@ -37,9 +37,11 @@ function injectMany(
 
   return (
     <>
-      {parts.map((part, i) =>
-        replacements[part] ? replacements[part](part) : part,
-      )}
+      {parts.map((part, i) => (
+        <span key={i}>
+          {replacements[part] ? replacements[part](part) : part}
+        </span>
+      ))}
     </>
   );
 }
