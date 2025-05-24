@@ -1,4 +1,8 @@
 {
+  "name": "pradee.dev",
+  "version": "1.0.0",
+  "description": "A personal website of Pradeep",
+  "author": "Pradeep <@pradeexsu>",
   "private": true,
   "scripts": {
     "dev": "next dev",
