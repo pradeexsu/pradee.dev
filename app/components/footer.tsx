@@ -7,11 +7,7 @@ export default function Footer() {
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         {footerLinks.map((link) => (
           <li key={link.label}>
-            <AnchorLink
-              label={link.label}
-              link={link.link}
-              new_tab={link.new_tab}
-            />
+            <AnchorLink label={link.label} link={link.link} />
           </li>
         ))}
       </ul>
