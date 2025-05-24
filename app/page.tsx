@@ -1,6 +1,7 @@
 import { info } from 'data/info';
 import Anc from './components/link';
 import './styles.scss';
+import { BlogPosts } from './components/posts';
 
 export default function Page() {
   return (
@@ -22,7 +23,9 @@ export default function Page() {
           ),
         })}
       </p>
-      <div className="my-8 animate-intro"> </div>
+      <div className="my-8 animate-intro">
+        <BlogPosts />
+      </div>
     </section>
   );
 }

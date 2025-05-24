@@ -6,7 +6,7 @@ export function GET(request: Request) {
   const avatar = url.searchParams.get('avatar');
   const description =
     url.searchParams.get('description') ||
-    'Engineering Experience at @samllcase | Technology Enthusiast';
+    'Engineering Experience at @smallcase | Technology Enthusiast';
 
   return new ImageResponse(
     (
