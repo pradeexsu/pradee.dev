@@ -1,5 +1,5 @@
-import { getBlogPosts } from 'app/blog/utils';
-import { info_data } from 'data/info';
+import { getBlogPosts } from '@/app/blog/utils';
+import { info_data } from '@/data/info';
 export const baseUrl = info_data.baseUrl;
 
 export default async function sitemap() {

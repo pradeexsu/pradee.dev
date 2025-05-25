@@ -1,4 +1,4 @@
-import { footerLinks } from 'data/info';
+import { footerLinks } from '@/data/info';
 import AnchorLink from './link';
 
 export default function Footer() {

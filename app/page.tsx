@@ -1,6 +1,6 @@
 import './styles.scss';
 
-import { info } from 'data/info';
+import { info } from '@/data/info';
 import Badge from './components/badge';
 import { BlogPosts } from './components/posts';
 

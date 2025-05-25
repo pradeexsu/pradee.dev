@@ -1,5 +1,5 @@
-import { baseUrl } from 'data/info';
-import { getBlogPosts } from 'app/blog/utils';
+import { baseUrl } from '../../data/info';
+import { getBlogPosts } from '../../app/blog/utils';
 
 export async function GET() {
   let allBlogs = await getBlogPosts();

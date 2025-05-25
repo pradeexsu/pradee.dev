@@ -1,6 +1,6 @@
 import './global.css';
-import 'utils/string';
-import { cx } from 'utils/class';
+import '@/utils/string';
+import { cx } from '@/utils/class';
 
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
@@ -9,7 +9,7 @@ import { Navbar } from './components/nav';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Footer from './components/footer';
-import { info_data, baseUrl } from 'data/info';
+import { info_data, baseUrl } from '../data/info';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
