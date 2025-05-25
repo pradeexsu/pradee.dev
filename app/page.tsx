@@ -2,7 +2,6 @@ import './styles.scss';
 
 import { info } from '@/data/info';
 import Badge from './components/badge';
-import { BlogPosts } from './components/posts';
 
 export default function Page() {
   return (
@@ -17,7 +16,7 @@ export default function Page() {
         })}
       </p>
       <div className="my-8 animate-intro">
-        <BlogPosts />
+        {/* <BlogPosts /> */}
       </div>
     </section>
   );
