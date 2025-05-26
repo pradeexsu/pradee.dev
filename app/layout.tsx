@@ -87,6 +87,14 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </main>
+        <div
+          className="fixed left-0 blur top-[-10px] z-40 h-12 w-screen dark:bg-black bg-neutral-100 opacity-90"
+          aria-hidden="true"
+        ></div>
+        <div
+          className="fixed left-0 bottom-[-10px] z-40 h-12 w-screen dark:bg-black bg-neutral-100 opacity-90 blur dark:bottom-[-20px]"
+          aria-hidden="true"
+        ></div>
       </body>
     </html>
   );
