@@ -30,15 +30,15 @@ export default function Page() {
       >
         Pradeep Suthar
       </h1>
-      <p className="mb-4 animate-intro dark:text-white">
+      <p className="mb-4 animate-intro dark:text-white ">
         {info.description.injectMany({
           '@smallcase': () => (
-            <IconBadge>
+            <IconBadge href="https://smallcase.com">
               <SmallcaseLogo />
             </IconBadge>
           ),
           '@upstox': () => (
-            <IconBadge>
+            <IconBadge href="https://upstox.com">
               <UpstoxLogo />
             </IconBadge>
           ),
