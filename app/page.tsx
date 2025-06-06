@@ -25,12 +25,16 @@ export default function Page() {
   return (
     <section>
       <h1
-        className="mb-8 text-2xl font-semibold tracking-tighter animate-intro heading"
+        className="text-3xl font-semibold tracking-tighter animate-intro heading"
         onDoubleClick={toggleTheme}
       >
         Pradeep Suthar
       </h1>
-      <p className="mb-4 animate-intro dark:text-white ">
+      <div className="text-xs font-light animate-intro">
+        Building financial systems at scale
+      </div>
+
+      <p className="mt-10 my-4 animate-intro dark:text-white ">
         {info.description.injectMany({
           '@smallcase': () => (
             <IconBadge href="https://smallcase.com">
@@ -43,6 +47,11 @@ export default function Page() {
             </IconBadge>
           ),
         })}
+      </p>
+
+      <p className="my-4 animate-intro dark:text-white ">
+        Outside of engineering, I enjoy walking in the woods and simply taking
+        in the mountains, open sky, and waters.
       </p>
       <div className="my-8 animate-intro">
         {/* <BlogPosts /> */}

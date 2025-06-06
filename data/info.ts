@@ -59,11 +59,11 @@ const footerLinks = [
     link: 'https://linkedin.com/in/pradeep-swe',
     new_tab: true,
   },
-  {
-    label: 'rss',
-    link: '/rss',
-    new_tab: false,
-  },
+  // {
+  //   label: 'rss',
+  //   link: '/rss',
+  //   new_tab: false,
+  // },
 ];
 
 const baseUrl = info_data.baseUrl;

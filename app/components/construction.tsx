@@ -6,7 +6,7 @@ function Construction() {
       <div className="lowercase font-bold text-lg">under</div>
       <div className="uppercase font-extrabold text-xl">Construction </div>
       <div className="text-sm text-gray-500 dark:text-gray-400">
-        Please check back later.
+        I'm crafting something worthwhile. Drop by soon for a peek into my work, thoughts, and experiments.
       </div>
     </div>
   );
