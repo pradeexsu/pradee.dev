@@ -16,7 +16,7 @@ function IconBadge({
       target="_blank"
       rel="noreferrer"
       className={cx(
-        'mx-1 px-1 py-0.5 border-[.5px] border-black/40 dark:border-white/40 rounded inline-block align-middle',
+        'px-1 py-0.5 border-[.5px] border-black/40 dark:border-white/40 rounded inline-block align-middle',
         className,
       )}
     >
