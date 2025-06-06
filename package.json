@@ -32,7 +32,8 @@
     "react-lottie": "^1.2.10",
     "sugar-high": "^0.9.3",
     "tailwindcss": "^4.1.4",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "zustand": "^5.0.5"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.13",
