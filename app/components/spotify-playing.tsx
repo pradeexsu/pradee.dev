@@ -14,7 +14,7 @@ export default function SpotifyPlaying() {
   const showShimmer = isLoading && !data?.isPlaying;
 
   // Limit title length for layout stability
-  const MAX_TITLE_CHARS = 32;
+  const MAX_TITLE_CHARS = 24;
   const getTitle = (title: string) =>
     title.length > MAX_TITLE_CHARS
       ? title.slice(0, MAX_TITLE_CHARS - 1) + '…'

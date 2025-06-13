@@ -42,7 +42,6 @@ const getNowPlaying = async () => {
 
 export async function GET(_: NextRequest, __: NextResponse) {
   const response = await getNowPlaying();
-  console.log(response.data)
   if (
     response.status === 204 ||
     response.status > 400 ||
