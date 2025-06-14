@@ -12,7 +12,7 @@ export default function Footer() {
           </li>
         ))}
       </ul>
-      <SpotifyPlaying />
+      {/* <SpotifyPlaying /> */}
     </footer>
   );
 }
