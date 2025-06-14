@@ -4,7 +4,7 @@ import './../utils/string';
 import './styles.scss';
 
 import { info } from '@/data/info';
-import Construction from './components/construction';
+import Projects from './components/projects';
 import { usethemeStore } from '@/store/store';
 import UpstoxLogo from './common/Upstox';
 import SmallcaseLogo from './common/Smallcase';
@@ -30,7 +30,7 @@ export default function Page() {
         <h1 className="text-3xl font-semibold tracking-tighter animate-intro heading">
           Pradeep Suthar
         </h1>
-        <div onClick={toggleTheme} className="animate-intro">
+        <div onClick={toggleTheme} className="animate-intro select-none">
           {dark ? <SunIcon /> : <MoonIcon />}
         </div>
       </div>
@@ -53,12 +53,12 @@ export default function Page() {
         })}
       </p>
       <p className="my-4 animate-intro ">
-        Beyond engineering, I enjoy downhill skateboarding. I’ve stayed curious
+        Beyond engineering, I enjoy downhill skateboarding. I've stayed curious
         about defense and tech developments.
       </p>
       <div className="my-8 animate-intro">
         {/* <BlogPosts /> */}
-        <Construction />
+        <Projects />
       </div>
     </section>
   );

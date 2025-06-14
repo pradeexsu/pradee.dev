@@ -19,7 +19,7 @@ export default function SpotifyPlaying() {
 
   if (isLoading) {
     return (
-      <div className="group dark:text-white text-black relative flex w-72 items-start space-x-2 rounded-md transition-shadow">
+      <div className="group dark:text-white text-black relative flex w-72 items-start space-x-2 rounded-md transition-shadow select-none">
         <div className="w-12 h-12 shadow-xl rounded overflow-hidden">
           <div className="animate-pulse w-full h-full bg-gray-100/20 rounded" />
         </div>
@@ -38,7 +38,7 @@ export default function SpotifyPlaying() {
 
   if (!isPlaying) {
     return (
-      <div className="group dark:text-white text-black relative flex w-72 items-start space-x-2 rounded-md transition-shadow grayscale hover:grayscale-0">
+      <div className="group dark:text-white text-black relative flex w-72 items-start space-x-2 rounded-md transition-shadow grayscale hover:grayscale-0 select-none">
         <SpotifyIcon />
         <div className="flex-1">
           <p className="component font-bold whitespace-nowrap overflow-hidden relative block">
@@ -55,7 +55,7 @@ export default function SpotifyPlaying() {
     : 'Not Listening';
 
   return (
-    <div className="group dark:text-white text-black w-72 space-x-2 rounded-md">
+    <div className="group w-72 space-x-2 rounded-md select-none">
       <a
         href={data.songUrl}
         target="_blank"
