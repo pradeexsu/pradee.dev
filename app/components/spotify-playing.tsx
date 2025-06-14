@@ -39,11 +39,10 @@ export default function SpotifyPlaying() {
   if (!isPlaying) {
     return (
       <div className="group dark:text-white text-black relative flex w-72 items-start space-x-2 rounded-md transition-shadow grayscale hover:grayscale-0 select-none">
-        <SpotifyIcon />
         <div className="flex-1">
           <p className="component font-bold whitespace-nowrap overflow-hidden relative block">
             Not Listening
-          </p>
+          </p>  
           <p className="font-dark text-xs">Spotify</p>
         </div>
       </div>
