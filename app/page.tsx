@@ -9,6 +9,8 @@ import { usethemeStore } from '@/store/store';
 import UpstoxLogo from './common/Upstox';
 import SmallcaseLogo from './common/Smallcase';
 import IconBadge from './components/icon-badge';
+import { SunIcon } from './common/motion/SunIcon';
+import { MoonIcon } from './common/motion/MoonIcon';
 
 export default function Page() {
   const { toggle, dark } = usethemeStore();
@@ -24,12 +26,14 @@ export default function Page() {
 
   return (
     <section>
-      <h1
-        className="text-3xl font-semibold tracking-tighter animate-intro heading"
-        onDoubleClick={toggleTheme}
-      >
-        Pradeep Suthar
-      </h1>
+      <div className="flex justify-between items-end">
+        <h1 className="text-3xl font-semibold tracking-tighter animate-intro heading">
+          Pradeep Suthar
+        </h1>
+        <div onClick={toggleTheme} className="animate-intro">
+          {dark ? <SunIcon /> : <MoonIcon />}
+        </div>
+      </div>
       <div className="text-xs font-light animate-intro">
         Building financial systems at scale
       </div>
@@ -48,10 +52,9 @@ export default function Page() {
           ),
         })}
       </p>
-
-      <p className="my-4 animate-intro dark:text-white ">
-        Outside of engineering, I enjoy walking in the woods and simply taking
-        in the mountains, open sky, and waters.
+      <p className="my-4 animate-intro ">
+        Beyond engineering, I enjoy downhill skateboarding. I’ve stayed curious
+        about defense and tech developments.
       </p>
       <div className="my-8 animate-intro">
         {/* <BlogPosts /> */}

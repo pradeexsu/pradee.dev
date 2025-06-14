@@ -6,6 +6,10 @@
   color: var(--sh-identifier);
 }
 
+* {
+  @apply transition-colors duration-500;
+}
+
 img {
   @apply select-none;
 }
